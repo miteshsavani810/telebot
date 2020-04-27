@@ -4,8 +4,10 @@
   "description": "telegram bot testing",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js",
-    "start": "node index.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently --kill-others \"npm run mapcreate\" \"npm run dataprovider\"",
+    "mapcreate": "node src\\test.js",
+    "dataprovider": "node src\\index.js"
   },
   "author": "mitesh.savani",
   "license": "ISC",
