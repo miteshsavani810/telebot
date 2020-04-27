@@ -1,0 +1,20 @@
+{
+  "name": "telegram-bot",
+  "version": "1.0.0",
+  "description": "telegram bot testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently --kill-others \"npm run mapcreate\" \"npm run dataprovider\"",
+    "mapcreate": "node src\\test.js",
+    "dataprovider": "node src\\index.js"
+  },
+  "author": "mitesh.savani",
+  "license": "ISC",
+  "dependencies": {
+    "jimp": "^0.10.3",
+    "moment": "^2.24.0",
+    "node-telegram-bot-api": "^0.40.0",
+    "concurrently": "^5.2.0"
+  }
+}
